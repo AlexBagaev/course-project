@@ -22,7 +22,7 @@ public:
     AccessRules(AccessRules&&)                = delete;
     AccessRules operator=(const AccessRules&) = delete;
     AccessRules operator=(AccessRules&&)      = delete;
-    ~AccessRules()                            = default; 
+    ~AccessRules();
 
    bool IsPassValid(bool passValid);
    bool IsAccessLevelCorrespond(std::int32_t passAccessLevel);

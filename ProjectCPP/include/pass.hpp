@@ -24,7 +24,7 @@ public:
     Pass(Pass&&)                = delete;
     Pass operator=(const Pass&) = delete;
     Pass& operator=(Pass&&)     = delete;
-    ~Pass()                     = default;
+    ~Pass();
         
     void InvalidatePass(bool& m_valid);
     void ValidatePass(bool& m_valid);

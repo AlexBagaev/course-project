@@ -36,5 +36,11 @@ void Checkpoint::PrintScanRezult()
     }
 }
 
+Checkpoint::~Checkpoint()
+{
+    std::cout << "The checkpoint " << m_checkpointName << " has been destroyed" << std::endl;
+    delete m_rules;
+}
+
 
 } // namespace checkpoint

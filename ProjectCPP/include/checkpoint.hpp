@@ -24,7 +24,7 @@ public:
     Checkpoint(Checkpoint&&)                = delete;
     Checkpoint operator=(const Checkpoint&) = delete;
     Checkpoint operator=(Checkpoint&&)      = delete;
-    ~Checkpoint()                           = default;
+    ~Checkpoint();
     
     
     bool ScanPass();
