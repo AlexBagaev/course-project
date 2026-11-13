@@ -3,6 +3,7 @@
 #include <string>
 #include <string_view>
 #include <iostream>
+#include <cstdint>
 
 namespace rules 
 {
