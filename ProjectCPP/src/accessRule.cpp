@@ -31,4 +31,9 @@ bool AccessRules::IsAccessLevelCorrespond(std::int32_t passAccessLevel)
     }
 }
 
+AccessRules::~AccessRules()
+{
+    std::cout << "The access rules " << m_rulesName << " has been destroyed" << std::endl;
+}
+
 } // namespace rules
