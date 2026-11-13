@@ -17,7 +17,7 @@ private:
     bool m_valid{ false };
 
 public:
-    Pass(std::string id, std::int32_t accessLevel, bool Valid);
+    Pass(std::string_view id, std::int32_t accessLevel, bool Valid);
 
     Pass()                      = delete;
     Pass(const Pass&)           = delete;
@@ -26,8 +26,8 @@ public:
     Pass& operator=(Pass&&)     = delete;
     ~Pass()                     = default;
         
-    void InvalidatePass(bool& m_valid){};
-    void ValidatePass(bool& m_valid){};
+    void InvalidatePass(bool& m_valid);
+    void ValidatePass(bool& m_valid);
 
     [[nodiscard]] bool GetValid() const
     {

@@ -3,7 +3,7 @@
 namespace pass 
 {
 
-Pass::Pass(std::string id, std::int32_t accessLevel, bool valid)
+Pass::Pass(std::string_view id, std::int32_t accessLevel, bool valid)
     : m_id{ id }
     , m_accessLevel{ accessLevel }
     , m_valid{ valid }
@@ -37,7 +37,7 @@ void Pass::Pass::ValidatePass(bool& m_valid)
 
 Pass::~Pass()
 {
-    std::cout << "The pass " << m_id << " has been destroyed." << std::endl; 
+    std::cout << "The pass " << m_id << " has been destroyed" << std::endl;
 }
  
 } // namespace pass 
