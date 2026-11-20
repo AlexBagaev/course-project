@@ -8,6 +8,7 @@ public class AccessRules {
   public AccessRules (String rulesName, int zoneAccessLevel) {
     this.rulesName = rulesName;
     this.zoneAccessLevel = zoneAccessLevel;
+    System.out.println("Создан объект класса AccessRules");
   }
 
   public boolean checkPassValid(boolean passValid) {

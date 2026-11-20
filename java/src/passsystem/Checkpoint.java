@@ -11,6 +11,7 @@ public class Checkpoint {
     this.rules = new AccessRules(rulesName, zoneAccessLevel);
     this.checkpointName = checkpointName;
     this.currentPass = currentPass;
+    System.out.println("Создан объект класса Checkpoint");
   }
 
   public void scanPass() {

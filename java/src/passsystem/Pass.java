@@ -10,6 +10,7 @@ public class Pass {
     this.id = id;
     this.accessLevel = accessLevel;
     this.validPass = validPass;
+    System.out.println("Создан объект класса Pass");
   }
 
   public String getId() { return id; }
@@ -40,5 +41,4 @@ public class Pass {
     return "Состояние пропуска" + id + ": "
       + (validPass ? "активирован." : "деактивирован.");
   }
-
 }
