@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <cstdint>
 #include <string>
 #include <string_view>
@@ -13,7 +14,7 @@ class Checkpoint
 private:
     std::string m_checkpointName{ };
     pass::Pass& m_currentPass;
-    rules::AccessRules* m_rules{ nullptr };
+    std::unique_ptr<rules::AccessRules> m_rules{ nullptr };
     bool m_scanRezult{ }; 
 
 public:
