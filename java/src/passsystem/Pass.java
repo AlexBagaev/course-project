@@ -35,4 +35,10 @@ public class Pass {
     
   }
 
+  @Override 
+  public String toString() {
+    return "Состояние пропуска" + id + ": "
+      + (validPass ? "активирован." : "деактивирован.");
+  }
+
 }
