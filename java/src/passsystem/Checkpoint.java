@@ -19,11 +19,7 @@ public class Checkpoint {
     scanRez = check1 && check2;
   }
 
-  public void printScanRez() {
-    if (scanRez) {
-      System.out.println("Проход разрешён.");
-    } else {
-      System.out.println("Проход запрещён.");
-    }
+  public String printScanRez() {
+    return (scanRez ? "Проход разрешён." : "Проход запрещён.");
   }
 }
