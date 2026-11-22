@@ -7,7 +7,7 @@ Checkpoint::Checkpoint(std::string_view checkpointName, std::string_view rulesNa
     : m_checkpointName{ checkpointName }
     , m_currentPass{ currentPass }
     {
-       m_rules = new rules::AccessRules( rulesName, zoneAccessLevel );
+       m_rules = std::make_unique<rules::AccessRules>(rulesName, zoneAccessLevel );
     }
 
 bool Checkpoint::ScanPass()
@@ -39,7 +39,6 @@ void Checkpoint::PrintScanRezult()
 Checkpoint::~Checkpoint()
 {
     std::cout << "The checkpoint " << m_checkpointName << " has been destroyed" << std::endl;
-    delete m_rules;
 }
 
 

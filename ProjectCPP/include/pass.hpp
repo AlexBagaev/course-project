@@ -19,7 +19,7 @@ private:
 public:
     Pass(std::string_view id, std::int32_t accessLevel, bool Valid);
 
-    Pass()                      = delete;
+    Pass()                      = default;
     Pass(const Pass&)           = delete;
     Pass(Pass&&)                = delete;
     Pass operator=(const Pass&) = delete;
@@ -53,6 +53,11 @@ public:
         m_accessLevel = accessLevel;
     }
         
+     void SetValid (bool valid)
+    {
+        m_valid = valid;
+    }
+
     };
 
 } // namespace pass
